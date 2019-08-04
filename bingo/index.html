@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>El bingo de Adalab</title>
+  </head>
+  <body>
+    <section class="bingo">
+      <header class="bingo__header">
+        <img
+          class="bingo__welcome-image"
+          src="./images/logo-adalab-80px.png"
+          alt="Bienvenidos al bingo Adalab"
+        />
+        <h1 class="bingo__welcome-title">Bingo!!!</h1>
+        <button class="js-newBall">Saca una bolita</button>
+      </header>
+      <div class="bingo__balls">
+        <h2>Bolitas</h2>
+        <ul class="js-numbers bingo__outballs"></ul>
+      </div>
+      <div class="bingo__myplay">
+        <h2>Mi cartón</h2>
+        <ul class="bingo__mycard js-myNumbers"></ul>
+      </div>
+      <div class="bingo__extractedballs">
+        <ul class="bingo__list-extracted js-outballs"></ul>
+      </div>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>

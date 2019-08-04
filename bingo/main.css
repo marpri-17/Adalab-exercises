@@ -1,0 +1,86 @@
+*{
+    margin:0px;
+    
+}
+.bingo {
+    height: 100vh;
+    width: 100vw;
+    background-color:  #ccffe6;
+}
+.bingo__welcome-title{
+    font-size: 45px;
+    color:  #2e9e82;
+    text-shadow: 1px 2px 5px #66ffff;
+}
+.bingo__welcome-image{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.bingo__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bingo__balls {
+    border: 5px solid #66ffff;
+    border-radius: 15px;
+    margin: 20px 10px 35px 10px;
+    background-color: white;
+    max-height: 705px;
+}
+.bingo__extractedballs{
+    border: 5px solid #66ffff;
+    border-radius: 15px;
+    margin: 20px 10px 35px 10px;
+    background-color: white;
+}
+.bingo__list-extracted{
+    list-style: none;
+   display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    max-height: 160px;
+    overflow-y:scroll;
+}
+.bingo__myplay{
+    border: 5px solid #66ffff;
+    border-radius: 15px;
+    margin: 20px 10px 35px 10px;
+    background-color: white;
+    height: auto;
+}
+.bingo__mycard{
+    list-style: none;
+   display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    
+}
+.bingo__number-card{
+    margin: 10px;
+    width: 30px;
+    padding: 15px;
+    border: 5px solid #66ffff;
+    border-radius: 50%;
+    text-align: center;
+}
+.bingo__outballs{
+    list-style: none;
+   display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    
+}
+.bingo__number-ball {
+    list-style: none;
+    margin: 10px;
+    width: 30px;
+    padding: 15px;
+    border: 5px solid #66ffff;
+    border-radius: 50%;
+    text-align: center;
+}
+.strike {
+    background-color: #2e9e82;
+}
