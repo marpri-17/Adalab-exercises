@@ -1,5 +1,6 @@
 @import "core/reset";
 @import "core/variables";
+@import "core/mixins";
 body{
   font-family: 'Noto Sans', sans-serif;
 }
@@ -44,18 +45,18 @@ h1,h2,h3,small,p{
   display: none;
 }
 .exercise {
-  height: 250px;
-  width: 300px;
-  border: 5px groove $colorSecondary;
-  background-image: url(../images/mood-e1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  border-radius: 15px;
-  cursor: pointer;
+  &__item1 {
+    @include exercise_box;
+      background-image: url(../images/mood-e1.jpg);
+    }
+  &__item2{
+    @include exercise_box;
+    background-image: url(../images/numberGame-e2.jpg);
+  } 
+
   &__wrapper{
-    display: flex;
-    justify-content: center;
+    //display: flex;
+    //justify-content: center;
   }
   &__information {
     align-self: flex-end;
