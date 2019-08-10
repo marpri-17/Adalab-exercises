@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/7ae56157c5.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
     <title>Practice repository</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body>
-    <h1 class="title">¡Hola!</h1>
+  <body class="page">
+  <header class="page__header">
+    <h1 class="page__title">Practice repository</h1>
+    
+  </header>
     <p class="about">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis modi
       repudiandae rerum necessitatibus id enim distinctio fugit deleniti.
@@ -17,8 +22,8 @@
     </p>
     <div class="exercise item1 js-link">
       <div class="exercise__information collapsible--trigger">
-        <h3 class="exercise__name">Your mood today</h3>
-        <p class="exercise__description">
+        <h3 class="exercise__name js-icon">Your mood today <i class="fas fa-arrow-circle-up exercise__icon"></i></h3>
+        <p class="exercise__description hidden js-hidden">
           Ejercicio sencillo enfocado a JS. El emoji cambia usando el select y
           el fondo depende de si es par o impar un número aleatorio entre 0 y
           100.

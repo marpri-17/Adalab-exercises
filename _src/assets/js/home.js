@@ -1,22 +1,34 @@
 "use strict";
-/* const exercise1 = document.querySelector(".js-link");
+const exercise1 = document.querySelector(".js-link");
+const exerciseInfo = document.querySelector('.js-hidden');
+const icon = document.querySelector ('.js-icon');
 
-const goExercise1 = function(ev) {
+const goExercise1 = function() {
   window.location.href = "emoji-mood.html";
 };
 
-exercise1.addEventListener("click", goExercise1); */
+const toggleInfo = () => exerciseInfo.classList.toggle('hidden');
 
-//Collapsable
-const colIcon = document.querySelectorAll(".exercise__name");
-const collapsible = document.querySelectorAll(".collapsible--trigger");
-
-const updateCollapsible = ev => {
-  ev.stopPropagation();
-  const currentCollapsible = ev.currentTarget.childNodes[3];
-  currentCollapsible.classList.toggle("collapsible--content-open");
-};
-for (const item of collapsible) {
-  item.addEventListener("click", updateCollapsible);
+const changeIconDown =()=>{
+  icon.removeChild(icon.childNodes[1]);
+  const newArrowIcon = document.createElement('i');
+  newArrowIcon.classList.add('fas','fa-arrow-circle-down', 'exercise__icon')
+  icon.appendChild(newArrowIcon);
 }
-debugger;
+const changeIconUp =()=>{
+  icon.removeChild(icon.childNodes[1]);
+  const newArrowIcon = document.createElement('i');
+  newArrowIcon.classList.add('fas','fa-arrow-circle-up', 'exercise__icon')
+  icon.appendChild(newArrowIcon);
+}
+const handlerHover = () =>{
+  toggleInfo();
+  changeIconDown();
+}
+const handlerHoverOut = () =>{
+  toggleInfo();
+  changeIconUp();
+}
+exercise1.addEventListener("click", goExercise1);
+exercise1.addEventListener('mouseover', handlerHover);
+exercise1.addEventListener('mouseout', handlerHoverOut);

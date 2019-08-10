@@ -1,6 +1,31 @@
 @import "core/reset";
 @import "core/variables";
-
+body{
+  font-family: 'Noto Sans', sans-serif;
+}
+.page{
+  background-color: #ffffff;
+  &__header{
+    margin: 0;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../images/home.jpg');
+    background-size: cover;
+    background-position: center;
+     */
+  }
+  &__title{
+    margin: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2f3542;
+  }
+}
+.hidden{
+  display: none;
+}
 .exercise {
   height: 250px;
   width: 300px;
@@ -20,27 +45,19 @@
     opacity: 1;
     cursor: pointer;
     padding: 10px;
-    &::after {
-      content: "V";
-      position: relative;
-      top: 0px;
-      left: 145px;
-      background: #3449eb;
-      padding: 3px;
-      cursor: pointer;
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
     }
-  }
   &__description {
     opacity: 1;
-    display: none;
-  }
-  // Collapsables abiertos
-  .collapsible {
-    &--content-open {
-      display: block;
     }
+   &__icon{
+     transform: translateX(150px);
+   }
+}
+
+
+  // Collapsables abiertos
+.collapsible {
+  &--content-open {
+    display: block;
   }
 }
