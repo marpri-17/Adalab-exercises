@@ -7,6 +7,19 @@ body{
 h1,h2,h3,small,p{
   color: $colorText;
 }
+.menu{
+  &__list{
+    &-about{
+      color: red;
+    }
+    &-avatar{
+      width: 200px;
+      height: 200px;
+      background-image: url("../images/myAvatar.svg");
+      background-size: cover;
+    }
+  }
+}
 .page{
   background-color: #ffffff;
   &__header{
@@ -45,18 +58,28 @@ h1,h2,h3,small,p{
   display: none;
 }
 .exercise {
+  &__information{
+    align-self: flex-end;
+  }
+  &__link{
+    text-decoration: none;
+  }
   &__item1 {
     @include exercise_box;
       background-image: url(../images/mood-e1.jpg);
+      margin: 10px;
     }
   &__item2{
     @include exercise_box;
     background-image: url(../images/numberGame-e2.jpg);
+    margin: 10px;
   } 
 
   &__wrapper{
-    //display: flex;
-    //justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &__information {
     align-self: flex-end;

@@ -1,34 +1,50 @@
 "use strict";
-const exercise1 = document.querySelector(".js-link");
-const exerciseInfo = document.querySelector('.js-hidden');
-const icon = document.querySelector ('.js-icon');
+const exercises = document.querySelectorAll(".js-link");
+const exerciseInfo = document.querySelectorAll('.js-hidden');
+const icons = document.querySelectorAll('.js-icon');
 
-const goExercise1 = function() {
-  window.location.href = "emoji-mood.html";
-};
 
-const toggleInfo = () => exerciseInfo.classList.toggle('hidden');
+const toggleInfo = (item) => {
+  let selectInfo = item.children;
+  let selectText = selectInfo[0];
+  console.log (selectText);
+  let infoText = selectText.childNodes;
+  infoText[3].classList.toggle('hidden');
+}
+const pickedItem = (ev)=>{
+  return ev.currentTarget;
+}
 
-const changeIconDown =()=>{
+const changeIconDown =(item)=>{
+  let info = item.childNodes[1]
+  let icon = info.childNodes[1] ;
   icon.removeChild(icon.childNodes[1]);
   const newArrowIcon = document.createElement('i');
   newArrowIcon.classList.add('fas','fa-arrow-circle-down', 'exercise__icon')
   icon.appendChild(newArrowIcon);
 }
-const changeIconUp =()=>{
+const changeIconUp =(item)=>{
+  let info = item.childNodes[1]
+  let icon = info.childNodes[1]
   icon.removeChild(icon.childNodes[1]);
   const newArrowIcon = document.createElement('i');
   newArrowIcon.classList.add('fas','fa-arrow-circle-up', 'exercise__icon')
   icon.appendChild(newArrowIcon);
 }
-const handlerHover = () =>{
-  toggleInfo();
-  changeIconDown();
+const handlerHover = (event) =>{
+  toggleInfo(pickedItem(event));
+  changeIconDown(pickedItem(event));
 }
-const handlerHoverOut = () =>{
-  toggleInfo();
-  changeIconUp();
+const handlerHoverOut = (event) =>{
+  toggleInfo(pickedItem(event));
+  changeIconUp(pickedItem(event));
 }
-exercise1.addEventListener("click", goExercise1);
-exercise1.addEventListener('mouseover', handlerHover);
-exercise1.addEventListener('mouseout', handlerHoverOut);
+
+debugger;
+const addExerciseListener =()=>{
+  for (let item of exercises){
+    item.addEventListener('mouseover', handlerHover);
+    item.addEventListener('mouseout', handlerHoverOut);
+  }
+}
+addExerciseListener();
